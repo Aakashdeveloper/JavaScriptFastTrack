@@ -37,3 +37,11 @@ function add(){
 }
 console.log("a ouside>>>>",a)
 console.log("b outside>>>>",b)
+
+
+
+function * loop(){
+    for(i=0;i<10;i++){
+       yield i
+    }
+}
