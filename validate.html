@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Form</title>
+        <script>
+            const validate = () => {
+                var name = document.getElementById('fname').value;
+                if(name== ' ' || name==''){
+                    document.getElementById('output').innerText="Please enter firstname"
+                    document.getElementById('output').style.color="red"
+                }else{
+                    document.getElementById('output').innerText=""
+                    out = name.charAt(0).toUpperCase()+name.slice(0).toLowerCase()
+                    document.getElementById('fname').value = out
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form method="POST">
+            <label>FirstName</label>
+            <input type="text" id="fname" onblur="validate()"
+            name="fname" />
+            <br/>
+            <label>LastName</label>
+            <input type="text" id="lname" name="lname" />
+            <br/>
+            <button onsubmit="submitform()">Submit</button>
+            <input type="submit" value="Submit"/>
+        </form>
+        <p id="output"></p>
+    </body>
+</html>
