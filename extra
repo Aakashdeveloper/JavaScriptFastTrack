@@ -1,0 +1,65 @@
+package.json
+[
+    {
+        name:"a",
+        class:1
+    },
+    {
+        name:"b",
+        class:2
+    }
+]
+
+/************************
+    Step For Package.json
+**************************/
+> Navigate to the folder using cmd/Terminal
+> npm init
+> "Answer all Questions"
+> type "yes"
+
+// Local package
+// Global package=> build, start, compile
+
+/************************
+    Step to install localpackage
+**************************/
+> Navigate to the folder using cmd/Terminal
+> npm install <packagename>/npm i <packagename>
+  npm install <packagename> --save
+
+   npm i karma --save-dev
+
+/************************
+    Step to install globalpackage
+**************************/
+Win
+> Start cmd as admin
+> npm i -g @aakashdeveloper/create-node-app
+
+Mac/Linux
+> Start your Terminal
+> sudo npm i -g @aakashdeveloper/create-node-app
+
+/************************
+    Step to setup angular app
+**************************/
+Win
+> Start cmd as admin
+> npm i -g @angular/cli
+---------------------------
+> Navigate to the folder using cmd
+> ng new <app name>
+> cd <app name>
+> npm start
+> localhost:4200
+
+Mac/Linux
+> Start your Terminal
+> sudo npm i -g @angular/cli
+------------------------------
+> Navigate to the folder using cmd
+> ng new <app name>
+> cd <app name>
+> npm start
+> localhost:4200
