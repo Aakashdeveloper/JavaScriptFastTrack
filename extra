@@ -63,3 +63,18 @@ Mac/Linux
 > cd <app name>
 > npm start
 > localhost:4200
+
+
+> Module> To decalre all 
+> Component> It conatins html,css and logics
+> Pipe > Run time data change
+> Services> To Connect with external agent
+> routing> For navigate between the page
+> directive> Small part of page
+
+
+> OneWay Binding
+    >Data Binding   {{}}
+    >Property Binding []
+    >Event Binding  ()
+> Two Way Binding [{}]
