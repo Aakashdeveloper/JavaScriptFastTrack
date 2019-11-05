@@ -4,12 +4,20 @@
     </div>
     <div class="panel-body">
             <div class="row">
-                <input type="text"/>
+                <input type="text" [(ngModel)]="userText"/>
+                {{userText}}
             </div>
-            <div class="table-responsive">
+            <div class="table-responsive" *ngIf="showTable">
+                {{showImage}}
                 <table class="table">
                     <thead>
                         <tr>
+                            <td>
+                                <button class="btn btn-success"
+                                    (click)="toggleImage()">
+                                    Show Image
+                                </button>
+                            </td>
                             <th>Name</th>
                             <th>Code</th>
                             <th>Date</th>
@@ -19,10 +27,14 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let prod of products">
-                            <td>{{prod.productName}}</td>
-                            <td>{{prod.productCode}}</td>
-                            <td>{{prod.releaseDate}}</td>
-                            <td>{{prod.price}}</td>
+                            <td>
+                                <img [src]="prod.imageUrl"
+                                *ngIf="showImage"/>
+                            </td>
+                            <td>{{prod.productName | uppercase}}</td>
+                            <td>{{prod.productCode | lowercase}}</td>
+                            <td>{{prod.releaseDate | date}}</td>
+                            <td>{{prod.price | discount | currency:'INR'  }}</td>
                             <td>{{prod.starRating}}</td>
                         </tr>
                     </tbody>

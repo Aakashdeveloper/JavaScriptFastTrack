@@ -77,4 +77,12 @@ Mac/Linux
     >Data Binding   {{}}
     >Property Binding []
     >Event Binding  ()
-> Two Way Binding [{}]
+> Two Way Binding [()]
+
+///Pipes///////
+LowerCase
+UpperCase
+Currency
+TitleCase
+Date
+Percentage
