@@ -31,11 +31,13 @@
                                 <img [src]="prod.imageUrl"
                                 *ngIf="showImage"/>
                             </td>
-                            <td>{{prod.productName | uppercase}}</td>
+                            <td appchangeColor>{{prod.productName | uppercase}}</td>
                             <td>{{prod.productCode | lowercase}}</td>
                             <td>{{prod.releaseDate | date}}</td>
                             <td>{{prod.price | discount | currency:'INR'  }}</td>
-                            <td>{{prod.starRating}}</td>
+                            <td>
+                                <app-star [rating]="prod.starRating"></app-star>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

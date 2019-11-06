@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home.component';
 import { AppComponent } from './app.component';
@@ -9,9 +10,6 @@ import { ProductService } from './products/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MyDiscountPipe } from './products/myUpper.pipe';
 import { HomeOneComponent } from './home/home.component';
-import { AppRoutingModule } from './app-routing.module';
-import { StarComponent } from './shared/star.component';
-import { ChangeColorDirective } from './products/changecolor.directive';
 
 @NgModule({
 
@@ -22,7 +20,11 @@ import { ChangeColorDirective } from './products/changecolor.directive';
         BrowserModule,
         FormsModule,
         HttpClientModule,
-        AppRoutingModule
+        RouterModule.forRoot([
+            {path: 'product', component: ProductComponent},
+            {path: 'home', component: HomeOneComponent},
+            {path: '', redirectTo: 'home', pathMatch: 'full'},
+        ])
     ],
     // Declaration
     // All component,pipe, directive
@@ -31,9 +33,7 @@ import { ChangeColorDirective } from './products/changecolor.directive';
         HomeComponent,
         ProductComponent,
         MyDiscountPipe,
-        HomeOneComponent,
-        StarComponent,
-        ChangeColorDirective
+        HomeOneComponent
     ],
 
     // Bootstrap
