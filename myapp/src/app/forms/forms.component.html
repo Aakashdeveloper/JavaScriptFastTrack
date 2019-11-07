@@ -1,0 +1,30 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        User Froms
+    </div>
+    <div class="panel-body">
+        <form #form="ngForm" (submit)="submitForm(form)">
+            <div class="form-group">
+                <label for="fname" class="control-label">Fname</label>
+                <input class="form-control"
+                name="name"
+                [(ngModel)]="user.fname"
+                required
+                id="fName"
+                />
+            </div>
+            <div class="form-group">
+                <label for="fname" class="control-label">Lname</label>
+                <input class="form-control"
+                name="lname"
+                [(ngModel)]="user.lname"
+                required
+                id="lName"
+                />
+            </div>
+            <button class="btn btn-success" type="submit">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>

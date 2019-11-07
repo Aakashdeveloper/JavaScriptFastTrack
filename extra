@@ -86,3 +86,14 @@ Currency
 TitleCase
 Date
 Percentage
+
+
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Vanitha-UI/react-redux.git
+git push -u origin master
+
+git username  vanitha-UI
+git gloabl email 
+

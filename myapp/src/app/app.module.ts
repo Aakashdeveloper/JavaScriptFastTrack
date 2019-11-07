@@ -12,6 +12,7 @@ import { HomeOneComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StarComponent } from './shared/star.component';
 import { ChangeColorDirective } from './products/changecolor.directive';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
 
@@ -33,7 +34,8 @@ import { ChangeColorDirective } from './products/changecolor.directive';
         MyDiscountPipe,
         HomeOneComponent,
         StarComponent,
-        ChangeColorDirective
+        ChangeColorDirective,
+        FormsComponent
     ],
 
     // Bootstrap
